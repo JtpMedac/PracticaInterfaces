@@ -14,6 +14,7 @@ import javax.swing.table.DefaultTableModel;
 public class Interfacita extends javax.swing.JFrame {
 
     ArrayList<Profesor> Profesores = new ArrayList<>();
+
     /**
      * Creates new form Interfacita
      */
@@ -229,7 +230,7 @@ public class Interfacita extends javax.swing.JFrame {
         String sueldo = tSueldo.getText();
         String estudios = bEstudios.getSelectedItem().toString();
         String direccion = tDireccion.getText();
-        
+
         ArrayList<String> vector = new ArrayList<>();
         vector.add(nombre);
         vector.add(DNI);
@@ -237,27 +238,30 @@ public class Interfacita extends javax.swing.JFrame {
         vector.add(sueldo);
         vector.add(estudios);
         vector.add(direccion);
-        
-        
-        
-        boolean sexoB;
-        sexoB = !sexo.equalsIgnoreCase("Hombre");
-        
-        try{
-        double sueldoD = Double.valueOf(sueldo);
-        Profesor test = new Profesor(nombre, direccion, DNI, sexoB, sueldoD, estudios);
-        
-        Profesores.add(test);
-        for(int i= 0 ; i<Profesores.size();i++){
-        System.out.println(Profesores.get(i));
-        }
-        DefaultTableModel modelo = (DefaultTableModel) Tabla.getModel();
-        
-        modelo.addRow(vector.toArray());
-        }catch(Exception e){
+
+        tNombre.setText("");
+        tDNI.setText("");
+        tSueldo.setText("");
+        tDireccion.setText("");
+
+        try {
+            boolean sexoB = !sexo.equalsIgnoreCase("Hombre");
+            double sueldoD = Double.valueOf(sueldo);
+            Profesor test = new Profesor(nombre, direccion, DNI, sexoB, sueldoD, estudios);
+
+            Profesores.add(test);
+
+            for (int i = 0; i < Profesores.size(); i++) {
+                System.out.println(Profesores.get(i));
+            }
+
+            DefaultTableModel modelo = (DefaultTableModel) Tabla.getModel();
+            modelo.addRow(vector.toArray());
+
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        
+
     }//GEN-LAST:event_bInsertActionPerformed
 
     private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
@@ -265,8 +269,8 @@ public class Interfacita extends javax.swing.JFrame {
         DefaultTableModel modelo = (DefaultTableModel) Tabla.getModel();
         modelo.removeRow(fila);
         Profesores.remove(fila);
-        for(int i= 0 ; i<Profesores.size();i++){
-        System.out.println(Profesores.get(i));
+        for (int i = 0; i < Profesores.size(); i++) {
+            System.out.println(Profesores.get(i));
         }
     }//GEN-LAST:event_bDeleteActionPerformed
 
