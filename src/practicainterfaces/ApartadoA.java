@@ -11,14 +11,14 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Zenclos
  */
-public class Interfacita extends javax.swing.JFrame {
+public class ApartadoA extends javax.swing.JFrame {
 
     ArrayList<Profesor> Profesores = new ArrayList<>();
 
     /**
      * Creates new form Interfacita
      */
-    public Interfacita() {
+    public ApartadoA() {
         initComponents();
     }
 
@@ -291,20 +291,21 @@ public class Interfacita extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Interfacita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApartadoA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Interfacita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApartadoA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Interfacita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApartadoA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Interfacita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApartadoA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Interfacita().setVisible(true);
+                new ApartadoA().setVisible(true);
             }
         });
     }
