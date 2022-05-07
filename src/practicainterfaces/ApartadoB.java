@@ -5,10 +5,15 @@
 package practicainterfaces;
 
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class ApartadoB extends javax.swing.JFrame {
-
-    int cont = 0;
 
     /**
      * Creates new form ApartadoB
@@ -151,7 +156,7 @@ public class ApartadoB extends javax.swing.JFrame {
                         .addComponent(bReinicio)
                         .addGap(36, 36, 36)
                         .addComponent(tIntentos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(cIntentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(406, Short.MAX_VALUE))
         );
@@ -191,6 +196,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton2.setSelected(true);
             }
         }
+        ReproducirSonido("src/chino.wav");
     }//GEN-LAST:event_Boton1ActionPerformed
 
     private void Boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2ActionPerformed
@@ -227,6 +233,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton3.setSelected(true);
             }
         }
+        ReproducirSonido("src/chino.wav");
     }//GEN-LAST:event_Boton2ActionPerformed
 
     private void Boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3ActionPerformed
@@ -263,6 +270,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton4.setSelected(true);
             }
         }
+        ReproducirSonido("src/chino.wav");
     }//GEN-LAST:event_Boton3ActionPerformed
 
     private void Boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4ActionPerformed
@@ -299,6 +307,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton5.setSelected(true);
             }
         }
+        ReproducirSonido("src/chino.wav");
     }//GEN-LAST:event_Boton4ActionPerformed
 
     private void Boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5ActionPerformed
@@ -335,6 +344,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton6.setSelected(true);
             }
         }
+        ReproducirSonido("src/chino.wav");
     }//GEN-LAST:event_Boton5ActionPerformed
 
     private void Boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6ActionPerformed
@@ -371,6 +381,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton7.setSelected(true);
             }
         }
+        ReproducirSonido("src/chino.wav");
     }//GEN-LAST:event_Boton6ActionPerformed
 
     private void Boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7ActionPerformed
@@ -393,6 +404,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton6.setSelected(true);
             }
         }
+        ReproducirSonido("src/chino.wav");
     }//GEN-LAST:event_Boton7ActionPerformed
 
     private void bReinicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bReinicioActionPerformed
@@ -460,4 +472,15 @@ public class ApartadoB extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel tIntentos;
     // End of variables declaration//GEN-END:variables
+
+    public void ReproducirSonido(String nombreSonido){
+       try {
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(nombreSonido).getAbsoluteFile());
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInputStream);
+        clip.start();
+       } catch(UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
+         System.out.println("Error al reproducir el sonido.");
+       }
+     }
 }
