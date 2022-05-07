@@ -4,11 +4,11 @@
  */
 package practicainterfaces;
 
-/**
- *
- * @author Zenclos
- */
+import java.awt.Color;
+
 public class ApartadoB extends javax.swing.JFrame {
+
+    boolean[] luces = new boolean[]{false, false, false, false, false, false, false};
 
     /**
      * Creates new form ApartadoB
@@ -26,21 +26,191 @@ public class ApartadoB extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        Boton1 = new javax.swing.JToggleButton();
+        Boton2 = new javax.swing.JToggleButton();
+        Boton3 = new javax.swing.JToggleButton();
+        Boton4 = new javax.swing.JToggleButton();
+        Boton5 = new javax.swing.JToggleButton();
+        Boton6 = new javax.swing.JToggleButton();
+        Boton7 = new javax.swing.JToggleButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setSize(new java.awt.Dimension(1300, 380));
+
+        Boton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton1ActionPerformed(evt);
+            }
+        });
+
+        Boton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton2ActionPerformed(evt);
+            }
+        });
+
+        Boton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton3ActionPerformed(evt);
+            }
+        });
+
+        Boton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton4ActionPerformed(evt);
+            }
+        });
+
+        Boton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton5ActionPerformed(evt);
+            }
+        });
+
+        Boton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton6ActionPerformed(evt);
+            }
+        });
+
+        Boton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton7ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Boton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Boton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Boton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Boton5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Boton6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Boton7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(59, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(406, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton1ActionPerformed
+        if (Boton1.isSelected()) {
+            Boton1.setBackground(Color.yellow);
+            luces[0] = true;
+            if (Boton2.isSelected()) {
+                Boton2.setBackground(Color.gray);
+            }
+        } else {
+            Boton1.setBackground(Color.gray);
+            luces[0] = false;
+        }
+    }//GEN-LAST:event_Boton1ActionPerformed
+
+    private void Boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton2ActionPerformed
+        if (Boton2.isSelected()) {
+            Boton2.setBackground(Color.yellow);
+            luces[1] = true;
+            if (Boton1.isSelected()) {
+                Boton1.setBackground(Color.gray);
+            }
+        } else {
+            Boton2.setBackground(Color.gray);
+            luces[1] = false;
+        }
+    }//GEN-LAST:event_Boton2ActionPerformed
+
+    private void Boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton3ActionPerformed
+        if (Boton3.isSelected()) {
+            Boton3.setBackground(Color.yellow);
+            luces[2] = true;
+        } else {
+            Boton3.setBackground(Color.gray);
+            luces[2] = false;
+        }
+    }//GEN-LAST:event_Boton3ActionPerformed
+
+    private void Boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton4ActionPerformed
+        if (Boton4.isSelected()) {
+            Boton4.setBackground(Color.yellow);
+            luces[3] = true;
+        } else {
+            Boton4.setBackground(Color.gray);
+            luces[3] = false;
+        }
+    }//GEN-LAST:event_Boton4ActionPerformed
+
+    private void Boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5ActionPerformed
+        if (Boton5.isSelected()) {
+            Boton5.setBackground(Color.yellow);
+            luces[4] = true;
+        } else {
+            Boton5.setBackground(Color.gray);
+            luces[4] = false;
+        }
+    }//GEN-LAST:event_Boton5ActionPerformed
+
+    private void Boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton6ActionPerformed
+        if (Boton6.isSelected()) {
+            Boton6.setBackground(Color.yellow);
+            luces[5] = true;
+        } else {
+            Boton6.setBackground(Color.gray);
+            luces[5] = false;
+        }
+    }//GEN-LAST:event_Boton6ActionPerformed
+
+    private void Boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton7ActionPerformed
+        if (Boton7.isSelected()) {
+            Boton7.setBackground(Color.yellow);
+            luces[6] = true;
+        } else {
+            Boton7.setBackground(Color.gray);
+            luces[6] = false;
+        }
+    }//GEN-LAST:event_Boton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +248,13 @@ public class ApartadoB extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton Boton1;
+    private javax.swing.JToggleButton Boton2;
+    private javax.swing.JToggleButton Boton3;
+    private javax.swing.JToggleButton Boton4;
+    private javax.swing.JToggleButton Boton5;
+    private javax.swing.JToggleButton Boton6;
+    private javax.swing.JToggleButton Boton7;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
