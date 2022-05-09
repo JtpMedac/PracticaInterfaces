@@ -239,6 +239,7 @@ public class Interfacita extends javax.swing.JFrame {
             for (int i = 0; i < Profesores.size(); i++) {
                 System.out.println(Profesores.get(i));
             }
+            System.out.println("==========================================================");
         }
     }//GEN-LAST:event_bDeleteActionPerformed
 
