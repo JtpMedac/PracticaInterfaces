@@ -47,22 +47,11 @@ public class Interfacita extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(920, 1080));
 
-        tNombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tNombreActionPerformed(evt);
-            }
-        });
-
         lNombre.setText("Nombre");
 
         lDireccion.setText("Direccion");
 
         tDireccion.setPreferredSize(new java.awt.Dimension(128, 29));
-        tDireccion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tDireccionActionPerformed(evt);
-            }
-        });
 
         lDNI.setText("DNI");
 
@@ -70,18 +59,7 @@ public class Interfacita extends javax.swing.JFrame {
 
         lSueldo.setText("Sueldo");
 
-        tSueldo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tSueldoActionPerformed(evt);
-            }
-        });
-
         bEstudios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FP Medio", "FP Superior", "Bachillerato", "Universitario", "Postgrado", "Doctorado" }));
-        bEstudios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bEstudiosActionPerformed(evt);
-            }
-        });
 
         lEstudios.setText("Estudios");
 
@@ -203,44 +181,28 @@ public class Interfacita extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tNombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tNombreActionPerformed
-
-    private void tDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tDireccionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tDireccionActionPerformed
-
-    private void tSueldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tSueldoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tSueldoActionPerformed
-
-    private void bEstudiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEstudiosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bEstudiosActionPerformed
-
     private void bInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bInsertActionPerformed
-        String nombre = tNombre.getText();
-        String DNI = tDNI.getText();
-        String sexo = bSexo.getSelectedItem().toString();
-        String sueldo = tSueldo.getText();
-        String estudios = bEstudios.getSelectedItem().toString();
-        String direccion = tDireccion.getText();
-
-        ArrayList<String> vector = new ArrayList<>();
-        vector.add(nombre);
-        vector.add(DNI);
-        vector.add(sexo);
-        vector.add(sueldo);
-        vector.add(estudios);
-        vector.add(direccion);
-
-        tNombre.setText("");
-        tDNI.setText("");
-        tSueldo.setText("");
-        tDireccion.setText("");
-
         try {
+            String nombre = tNombre.getText();
+            String DNI = tDNI.getText();
+            String sexo = bSexo.getSelectedItem().toString();
+            String sueldo = tSueldo.getText();
+            String estudios = bEstudios.getSelectedItem().toString();
+            String direccion = tDireccion.getText();
+
+            ArrayList<String> vector = new ArrayList<>();
+            vector.add(nombre);
+            vector.add(DNI);
+            vector.add(sexo);
+            vector.add(sueldo);
+            vector.add(estudios);
+            vector.add(direccion);
+
+            tNombre.setText("");
+            tDNI.setText("");
+            tSueldo.setText("");
+            tDireccion.setText("");
+
             boolean sexoB = !sexo.equalsIgnoreCase("Hombre");
             double sueldoD = Double.valueOf(sueldo);
             Profesor test = new Profesor(nombre, direccion, DNI, sexoB, sueldoD, estudios);
@@ -261,12 +223,14 @@ public class Interfacita extends javax.swing.JFrame {
     }//GEN-LAST:event_bInsertActionPerformed
 
     private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
-        int fila = Tabla.getSelectedRow();
-        DefaultTableModel modelo = (DefaultTableModel) Tabla.getModel();
-        modelo.removeRow(fila);
-        Profesores.remove(fila);
-        for (int i = 0; i < Profesores.size(); i++) {
-            System.out.println(Profesores.get(i));
+        if ((Tabla.getSelectedRow() >= 0) && (Tabla.getSelectedRow() <= Tabla.getColumnCount())) {
+            int fila = Tabla.getSelectedRow();
+            DefaultTableModel modelo = (DefaultTableModel) Tabla.getModel();
+            modelo.removeRow(fila);
+            Profesores.remove(fila);
+            for (int i = 0; i < Profesores.size(); i++) {
+                System.out.println(Profesores.get(i));
+            }
         }
     }//GEN-LAST:event_bDeleteActionPerformed
 

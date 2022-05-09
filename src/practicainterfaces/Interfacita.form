@@ -124,9 +124,6 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="tNombre">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tNombreActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lNombre">
       <Properties>
@@ -144,9 +141,6 @@
           <Dimension value="[128, 29]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tDireccionActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lDNI">
       <Properties>
@@ -166,9 +160,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="tSueldo">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tSueldoActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="bEstudios">
       <Properties>
@@ -183,9 +174,6 @@
           </StringArray>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bEstudiosActionPerformed"/>
-      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
