@@ -1,4 +1,4 @@
-package practicainterfaces;
+package recursos;
 
 public class Persona {
 
