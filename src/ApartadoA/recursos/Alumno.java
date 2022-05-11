@@ -1,4 +1,4 @@
-package recursos;
+package ApartadoA.recursos;
 
 public class Alumno extends Persona {
 
@@ -32,7 +32,7 @@ public class Alumno extends Persona {
 
     @Override
     public String toString() {
-        String res="";
+        String res = "";
         res = getNombre() + " - " + getDNI();
         if (this.sexo) {
             res += "\nEs una chica";

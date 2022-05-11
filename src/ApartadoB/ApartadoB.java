@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package practicainterfaces;
+package ApartadoB;
 
 import java.awt.Color;
 import java.io.File;
@@ -189,7 +189,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton2.setBackground(Color.gray);
                 Boton2.setSelected(false);
             }
-            ReproducirSonido("src/recursos/chino.wav");
+            ReproducirSonido("src/ApartadoB/assets/chino.wav");
         } else {
             Boton1.setBackground(Color.gray);
             if (Boton2.isSelected()) {
@@ -222,7 +222,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton3.setBackground(Color.gray);
                 Boton3.setSelected(false);
             }
-            ReproducirSonido("src/recursos/chino.wav");
+            ReproducirSonido("src/ApartadoB/assets/chino.wav");
         } else {
             Boton2.setBackground(Color.gray);
             if (Boton1.isSelected()) {
@@ -262,7 +262,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton4.setBackground(Color.gray);
                 Boton4.setSelected(false);
             }
-            ReproducirSonido("src/recursos/chino.wav");
+            ReproducirSonido("src/ApartadoB/assets/chino.wav");
         } else {
             Boton3.setBackground(Color.gray);
             if (Boton2.isSelected()) {
@@ -302,7 +302,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton5.setBackground(Color.gray);
                 Boton5.setSelected(false);
             }
-            ReproducirSonido("src/recursos/chino.wav");
+            ReproducirSonido("src/ApartadoB/assets/chino.wav");
         } else {
             Boton4.setBackground(Color.gray);
             if (Boton3.isSelected()) {
@@ -342,7 +342,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton6.setBackground(Color.gray);
                 Boton6.setSelected(false);
             }
-            ReproducirSonido("src/recursos/chino.wav");
+            ReproducirSonido("src/ApartadoB/assets/chino.wav");
         } else {
             Boton5.setBackground(Color.gray);
             if (Boton4.isSelected()) {
@@ -382,7 +382,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton7.setBackground(Color.gray);
                 Boton7.setSelected(false);
             }
-            ReproducirSonido("src/recursos/chino.wav");
+            ReproducirSonido("src/ApartadoB/assets/chino.wav");
         } else {
             Boton6.setBackground(Color.gray);
             if (Boton5.isSelected()) {
@@ -415,6 +415,7 @@ public class ApartadoB extends javax.swing.JFrame {
                 Boton6.setBackground(Color.gray);
                 Boton6.setSelected(false);
             }
+            ReproducirSonido("src/ApartadoB/assets/chino.wav");
         } else {
             Boton7.setBackground(Color.gray);
             if (Boton6.isSelected()) {
@@ -427,8 +428,7 @@ public class ApartadoB extends javax.swing.JFrame {
         }
         contador++;
         cIntentos.setText(String.valueOf(contador));
-        comprobar(); 
-        ReproducirSonido("src/recursos/chino.wav");
+        comprobar();
     }//GEN-LAST:event_Boton7ActionPerformed
 
     private void bReinicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bReinicioActionPerformed

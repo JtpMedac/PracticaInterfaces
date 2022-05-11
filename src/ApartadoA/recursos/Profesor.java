@@ -1,4 +1,4 @@
-package recursos;
+package ApartadoA.recursos;
 
 public class Profesor extends Persona {
 
